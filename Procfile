@@ -1,1 +1,1 @@
-web: gunicorn perkeddit.wsgi
+web: gunicorn project.wsgi
