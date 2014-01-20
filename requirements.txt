@@ -3,3 +3,6 @@ konira
 sure
 djangorestframework
 django-guardian
+unicorn
+dj-database-url
+dj-static
