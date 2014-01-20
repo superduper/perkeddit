@@ -1,0 +1,22 @@
+<div class="posts">
+  <div ng-repeat="post in posts">
+    <div class="post row" >
+        <div class="col-md-1 alpha omega voter" style="text-align: center">
+          <h4>{{ post.score }}</h4>
+          <div class="btn-group btn-group-xs">
+              <a class="btn btn-default" href="" ng-click="upVote(post)"><span class="glyphicon glyphicon-arrow-up"></span></a>
+              <a class="btn btn-default" href="" ng-click="downVote(post)"><span class="glyphicon glyphicon-arrow-down"></span></a>
+          </div>
+        </div>
+        <div class="col-md-11">
+          <h5><a href="{{ post.link }}" ng-show="post.link" target="_blank">{{ post.title }}</a>
+               <a href="#/post/{{ post.id }}" ng-hide="post.link">{{ post.title }}</a>
+          </h5>
+          <div class="submitted"><span>submitted <span am-time-ago="post.created"></span> by <a>{{ post.owner.username }}</a></span>
+          </div>
+          <div class="comments share"><b><a href="#/post/{{ post.id }}">{{ post.comments_total }} comments</a></b>
+          </div>
+        </div>
+     </div>
+  </div>
+</div>

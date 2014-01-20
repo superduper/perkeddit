@@ -1,0 +1,49 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.container.main {
+    padding-top:15px;
+
+}
+.submit-new a {
+    width: 100%;
+    text-align: left;
+}
+.login-form a.forgot {
+    padding-top: 7px;
+}
+.alpha { padding-left: 0; }
+.omega { padding-right: 0; }
+.voter {
+    margin-top: 10px;
+}
+.submitted {
+    color: gray;
+    font-size: 0.9em;
+}
+.comments.share a {
+    color: darkgray;
+    font-size: 0.9em;
+}
+.post {
+    margin-bottom: 20px;
+}
+.load-more button {
+    width: 100%;
+}
+
+.btn-group-xs.xxs .btn {
+    font-size: 10px;
+}
+.commenter a, .commenter span{
+    font-size: 0.9em;
+}
+.commenter span{
+    color: gray;
+}
+.answer a {
+    font-size: 0.9em;
+    color: gray;
+    font-weight: bold;
+}

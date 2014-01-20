@@ -1,0 +1,49 @@
+<div class="posts">
+  <!-- post row-->
+  <div class="post row">
+    <div class="col-md-1 alpha omega voter" style="text-align: center">
+      <h4>{{ post.score }}</h4>
+      <div class="btn-group btn-group-xs">
+          <a class="btn btn-default" href="" ng-click="upVote()"><span class="glyphicon glyphicon-arrow-up"></span></a>
+          <a class="btn btn-default" href="" ng-click="downVote()"><span class="glyphicon glyphicon-arrow-down"></span></a>
+      </div>
+    </div>
+    <div class="col-md-10">
+      <h5><a href="">{{ post.title }}</a></h5>
+      <div class="submitted"><span>submitted <span am-time-ago="post.created"></span> by <a>{{ post.owner.username }}</a></span>
+      </div>
+      <div class="comments share"><b><a href="#">{{ post.comments_total }} comments</a></b><span>&nbsp;&nbsp;&nbsp;</span><b><a href="#/post/{{ post.id }}/">share link</a></b>
+      </div>
+      <div style="margin-top: 15px;">
+          <p ng-show="post.text">
+              {{ post.text }}
+          </p>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div class="comments row">
+    <div class="new-comment col-md-12">
+      <form ng-submit="submitComment(comment)">
+          <textarea class="form-control" ng-model="comment" required="required"></textarea><br>
+        <button class="btn btn-success btn-xs">Comment</button>
+      </form>
+    </div><br>
+    <div class="comments-list col-md-12">
+      <div ng-repeat="comment in post.comments">
+          <div class="comment row">
+            <div class="col-md-12">
+              <div class="commenter">
+                  <b><a>{{ comment.owner.username }}</a></b><span class="stats">&nbsp;</span> <span am-time-ago="comment.created"></span>
+              </div>
+              <div class="text">
+                <p>{{ comment.text }}</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <!--br-->
+  </div>
+</div>

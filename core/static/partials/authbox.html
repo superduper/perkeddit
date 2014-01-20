@@ -1,0 +1,37 @@
+<tabset>
+    <tab heading="Log in">
+        <br>
+        <div class="alert alert-danger" ng-show="loginError">
+              <span>{{ loginError }}</span>
+        </div>
+        <form>
+         <input ng-model="login.username" placeholder="Enter your username" type="text" required="required" class="form-control"><br>
+         <input ng-model="login.password" placeholder="Enter your password" type="password" required="password" class="form-control"><br>
+          <div class="buttons row">
+            <div class="col-md-12">
+              <button class="btn btn-default pull-left" ng-click="submitLogin(login)"><span>&nbsp;Login</span>
+              </button>
+            </div>
+          </div>
+        </form>
+    </tab>
+    <tab heading="Sign Up">
+        <br>
+        <div class="alert alert-danger" ng-show="signupError">
+              <span>{{ signupError }}</span>
+        </div>
+        <div class="alert alert-danger" ng-show="signup.repeat_password != signup.password">
+              <span>Passwords should match</span>
+        </div>
+        <form>
+          <input ng-model="signup.username" placeholder="Enter your username" type="text" required="required" class="form-control"><br>
+          <input ng-model="signup.password" placeholder="Enter your password" type="password" required="password" class="form-control"><br>
+          <input ng-model="signup.repeat_password" placeholder="Repeat password" type="password" required="password" class="form-control"><br>
+          <div class="buttons row">
+            <div class="col-md-12">
+              <button ng-click="submitSignup(signup)" class="btn btn-default pull-left"><span>&nbsp;Sign Up</span></button>
+            </div>
+          </div>
+        </form>
+    </tab>
+</tabset>
